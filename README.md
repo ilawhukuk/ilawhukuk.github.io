@@ -20,6 +20,7 @@ deposuna kopyalanır.
 | `.well-known/assetlinks.json` | Android'in doğrulanmış bağlantıları (Play'deki uygulama) |
 | `icon.png`, `favicon.png` | Uygulama simgesinden küçültülmüş |
 | `.nojekyll` | GitHub Pages dosyaları olduğu gibi sunar |
+| `dene/` (bu klasörde değil) | Web deneme sürümü; asıl depoda `bash scripts/web-deneme.sh` ile üretilir, yayın deposuna ayrıca konur |
 
 - Gizlilik, aydınlatma, koşullar, hesap silme ve künye sayfaları taslaklarından üretilir; burada elle düzeltilmez.
 - Gizlilik metni uygulamanın gerçek veri akışını anlatır. Veri akışı değişirse metin de değişir.

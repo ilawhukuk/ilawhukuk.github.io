@@ -56,7 +56,8 @@
   <p>Künyenin tamamı: <a href="kunye.html">İletişim ve künye</a>.</p>
   <h2>Kısaca</h2>
   <ul>
-    <li>Hesap açmadan çalışırsan hiçbir bilgin sunucuya gitmez; ilerlemen yalnız telefonunda durur. Yalnız güncelleme sorusu ve (açıksa) kişisel veri içermeyen hata raporları gelir.</li>
+    <li>Hesap açmadan çalışırsan ilerlemen yalnız telefonunda durur; takma adın ve yazdıkların sunucumuza gitmez.</li>
+    <li>Hesap açmasan da bazı teknik bilgiler gider. Ayar ve güncelleme soruları ile (açıksa) içerik soruları, hata raporları ve kullanım sayaçları sunucumuza gider. Güncelleme dosyaları sitemizden (GitHub) iner. Android'de ML Kit'in kullanım bilgisi Google'a gider. Bunlarla telefonunun IP adresi, bazılarıyla da kuruluma ya da cihaza özel numaralar gider; biz bu numaraları hesabınla bağlamayız. Ayrıntısı aşağıda, "Hesap açmasan da" bölümünde.</li>
     <li>Çalışma Notlarım'daki sayfa fotoğrafların ve notların yalnız telefonunda durur; sunucumuza gitmez, biz göremeyiz.</li>
     <li>Telefon numaranı, konumunu ve rehberini istemiyoruz. Uygulamada reklam yok.</li>
     <li>Verilerini satmıyoruz; reklam ya da pazarlama için kimseyle paylaşmıyoruz. Sana kampanya ya da reklam içerikli bildirim göndermiyoruz.</li>
@@ -122,13 +123,15 @@
     <li><strong>Teknik kayıtlar:</strong> telefonundaki oturum anahtarları ve altyapı sağlayıcısının standart erişim kayıtları (ör. IP adresi).</li>
   </ul>
   <h3>Hesap açmasan da</h3>
+  <p>Aşağıdaki isteklerin her birinde, her web isteğinde olduğu gibi, telefonunun IP adresi de isteğin gittiği yere (sunucumuz, GitHub ya da Google) ulaşır ve sağlayıcının standart erişim kayıtlarında kendi süresince kalır (bkz. "Teknik kayıtlar").</p>
   <ul>
+    <li><strong>Ayar ve içerik soruları:</strong> uygulama açılışta ve belli aralıklarla hangi bölümlerin açık olduğunu ve sürüm ayarını sunucumuza sorar. Sürüm ayarına ulaşamazsa onu sitemizden okur. İçerik paketleri açıksa yeni içerik olup olmadığını da sorar ve yenisini indirir. Giden: uygulamanın sürümü ve içerik sorusunda kademeli yayın için 0–99 arası bir sayı; hesabınla bağlantılı değildir.</li>
     <li><strong>Uygulama güncellemeleri:</strong>
       <ul>
         <li>uygulama, her açılışta ve öne geldiğinde (iki soru arasında en az 2 dakika) yeni güncelleme olup olmadığını sunucumuza sorar;</li>
         <li>giden: uygulamanın sürümü ve kullandığı güncelleme, telefonun türü (Android ya da iPhone) ve kademeli yayın için uygulamanın kendi seçtiği 0–99 arası bir sayı. Hesabınla bağlantılı değildir;</li>
         <li>güncelleme denetiminde kuruluma özel rastgele bir numara da gider; sunucu onu saklamaz;</li>
-        <li>güncellemenin dosyaları ve sürüm ayarı sitemizden (GitHub Pages) iner. GitHub her web isteğinde olduğu gibi IP adresini görür.</li>
+        <li>güncellemenin dosyaları sitemizden (GitHub Pages) iner; GitHub ziyaretçinin IP adresini güvenlik amacıyla kendisi kaydeder ve saklar.</li>
       </ul>
     </li>
     <li><strong>Hata raporları:</strong>
@@ -142,13 +145,13 @@
     <li><strong>Telefonda okuma (Android):</strong>
       <ul>
         <li>QR kodu okuma ve Çalışma Notlarım'da sayfa okuma, Google'ın ML Kit'iyle telefonda yapılır. Görüntünün kendisi ve okunan yazı Google'a gönderilmez;</li>
-        <li>ML Kit, nasıl çalıştığını ölçmek için Google'a kullanım bilgisi gönderir: telefonun türü ve sistem sürümü, uygulamanın adı ve sürümü, kuruluma özel bir numara, işlenen görüntünün boyutu, süreler ve hata kodları;</li>
+        <li>ML Kit, nasıl çalıştığını ölçmek için Google'a kullanım bilgisi gönderir: telefonun türü ve sistem sürümü, uygulamanın adı ve sürümü, kuruluma özel numaralar (belge tarayıcıda cihaz tanıtıcısı da), işlenen görüntünün boyutu, süreler ve hata kodları;</li>
         <li>Google bunları ML Kit'i ölçmek, hatalarını gidermek, geliştirmek ve kötüye kullanımı önlemek için kullanır; başkasına aktarmaz (Google'ın ML Kit koşulları).</li>
       </ul>
     </li>
     <li><strong>Kullanım sayaçları</strong> (açıksa):
       <ul>
-        <li>uygulama günde birkaç kez kişisel veri olmadan toplu sayaç gönderir. Giden bilgiler:
+        <li>uygulama günde birkaç kez adın, hesabın ve yazdıkların olmadan toplu sayaç gönderir. Giden bilgiler:
           <ul>
             <li>o gün açılıp açılmadığı;</li>
             <li>kurulum günü;</li>
@@ -162,6 +165,8 @@
       </ul>
     </li>
   </ul>
+  <h3>Web deneme sürümü</h3>
+  <p><a href="https://ilawhukuk.github.io/dene/">https://ilawhukuk.github.io/dene/</a> adresindeki deneme sürümü tarayıcında çalışır; sunucumuza bağlanmaz, hesap açılmaz. Bu sürümde senden kişisel veri toplamayız; ölçüm, reklam ve çerez kullanılmaz. Girdiğin ad, seçtiğin fakülte ve çalışma ilerlemen yalnız bu tarayıcının bu siteye ait yerel depolamasında durur; bize gelmez, biz göremeyiz. İlerlemeni Ayarlar › Gelişmiş › İlerlemeyi sıfırla ile, hepsini de tarayıcının site verisini silerek silebilirsin. Çevrim içi bölüm örnek verilerle çalışır: rakipler bottur, hiçbir şey paylaşılmaz. Sayfanın dosyaları GitHub Pages'ten (GitHub, Inc., ABD) iner. GitHub, kendi belgesine göre her ziyaretçinin IP adresini güvenlik amacıyla kaydeder ve saklar; bu kayıtlar bize iletilmez.</p>
   <h2>Çalışma Notlarım</h2>
   <ul>
     <li><strong>Notların yalnız telefonunda durur.</strong> Taradığın ya da galeriden seçtiğin kitap sayfalarının fotoğrafları, telefonun okuduğu metin, işaretlerin, kartların, testlerin ve ders notların sunucumuza ve iLaw'ın ilerleme yedeğine gitmez; biz göremeyiz.</li>
@@ -208,11 +213,16 @@
     <li><strong>Hizmet sağlayıcılar</strong> (bizim adımıza, bizim talimatımızla işler):
       <ul>
         <li>sunucumuz (Supabase);</li>
-        <li>Google (giriş, telefon bildirimi ve Android'de ML Kit'in kullanım bilgisi);</li>
-        <li>Apple (iPhone'da Apple ile giriş);</li>
-        <li>GitHub (site, sürüm ayarı ve uygulama güncellemelerinin dosyaları; kişisel veri tutulmaz, yalnız istek sırasında IP adresini görür).</li>
+        <li>Google (telefon bildirimi).</li>
       </ul>
       <p>Telefon bildiriminin başlığı ve kısa metni Google'ın bildirim hizmetinden (Firebase Cloud Messaging) geçer; mesaj bildirimlerinde mesajın metni yer almaz.</p>
+    </li>
+    <li><strong>Kendi amaçları için de işleyen sağlayıcılar:</strong>
+      <ul>
+        <li>Google ve Apple ile giriş: giriş, Google ya da Apple hesabınla onların ekranında yapılır; hesabının o tarafını onlar yönetir. Bize yalnız yukarıda yazılı giriş bilgileri gelir.</li>
+        <li>Google, Android'de ML Kit'in kullanım bilgisini (yukarıda, "Telefonda okuma") ML Kit'i ölçmek, hatalarını gidermek, geliştirmek ve kötüye kullanımı önlemek için kendisi de kullanır (Google'ın gizlilik politikasına göre).</li>
+        <li>GitHub sitemizi, sürüm ayarını ve uygulama güncellemelerinin dosyalarını barındırır (GitHub Pages). Bu dosyalarda kişisel veri yoktur; GitHub ziyaretçinin IP adresini güvenlik amacıyla kendisi kaydeder ve saklar.</li>
+      </ul>
     </li>
     <li><strong>Yetkili makamlar:</strong> yalnız yasal zorunluluk hâlinde.</li>
   </ul>
@@ -224,7 +234,7 @@
     <li>Veritabanının şifreli yedekleri Şirket'in bilgisayarında ve Şirket'in iki USB belleğinde, Türkiye'de durur; bir bulut hizmetine konmaz.</li>
     <li>Bu sağlayıcıların sunucuları Türkiye dışında olduğundan, yukarıdaki veriler yalnız sayılan amaçlarla sınırlı olarak yurt dışına aktarılır.</li>
   </ul>
-  <p>Hesap açmadan yaptığın her şey yalnız telefonunda kalır; yalnız yukarıdaki güncelleme sorusu ve (açıksa) hata raporları sunucumuza gelir. Çalışma Notlarım yalnız telefonunda (ve açıksa telefonunun kendi yedeğinde) durur.</p>
+  <p>Hesap açmadan yaptığın çalışma yalnız telefonunda kalır. Sunucumuza yalnız yukarıda sayılan teknik istekler gelir: ayar ve güncelleme soruları ile (açıksa) içerik soruları, hata raporları ve kullanım sayaçları. Bunlarla IP adresin, bazılarıyla da kuruluma özel rastgele bir numara gelir; takma adın ve yazdıkların gelmez. Çalışma Notlarım yalnız telefonunda (ve açıksa telefonunun kendi yedeğinde) durur.</p>
   <h2>Ne kadar süre</h2>
   <ul>
     <li>Hesabın açık olduğu sürece; aşağıdakiler daha kısa sürede kendiliğinden silinir.</li>

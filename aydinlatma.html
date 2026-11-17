@@ -42,7 +42,7 @@
   </header>
 
   <h1>Aydınlatma Metni</h1>
-  <p class="meta">Son güncelleme: 14 Kasım 2026 · Uygulama sürümü v0.14</p>
+  <p class="meta">Son güncelleme: 17 Kasım 2026 · Uygulama sürümü v0.14</p>
 
   <p>6698 sayılı Kişisel Verilerin Korunması Kanunu'nun (KVKK) 10. maddesi ve Aydınlatma Yükümlülüğünün Yerine Getirilmesinde Uyulacak Usul ve Esaslar Hakkında Tebliğ uyarınca, iLaw Hukuk uygulaması ve sitesi kapsamında kişisel verilerinin nasıl işlendiğini aşağıda bilgine sunarız.</p>
   <h2>1. Veri sorumlusu</h2>
@@ -69,7 +69,7 @@
       <tr><td>Trafik bilgisi: başkalarına görünen bir içerik eklenirken IP adresi, zaman, içeriğin türü ve kimliği</td><td>5651 sayılı Kanun'un yer sağlayıcıya yüklediği saklama yükümlülüğü</td><td>ç: hukuki yükümlülük</td></tr>
       <tr><td>Son görülme zamanı, uygulama sürümü</td><td>Çevrim içi sayısı; eski sürümleri kapatabilmek</td><td>f</td></tr>
       <tr><td>Toplu kullanım sayıları (açıksa)</td><td>Uygulamayı geliştirmek; kişiye özel profil çıkarılmaz (Ayarlar'dan kapatılır)</td><td>f</td></tr>
-      <tr><td>Hata raporları (kişisel veri ayıklanmış), rastgele kurulum numarası</td><td>Hataları bulmak ve düzeltmek; kötüye kullanımı sınırlamak (Ayarlar'dan kapatılır)</td><td>f</td></tr>
+      <tr><td>Hata raporları (e-posta adresi ve uzun sayılar ayıklanmış), rastgele kurulum numarası</td><td>Hataları bulmak ve düzeltmek; kötüye kullanımı sınırlamak (Ayarlar'dan kapatılır)</td><td>f</td></tr>
       <tr><td>Android'de telefonda okumanın (ML Kit) Google'a giden kullanım bilgisi</td><td>QR ve sayfa okumanın telefonda çalışması; Google'ın ML Kit'i ölçmesi</td><td>f</td></tr>
       <tr><td>Teknik kayıtlar (IP adresi, oturum anahtarları)</td><td>Hizmeti güvenle sunmak; yasal talepleri karşılamak</td><td>f; ç</td></tr>
       <tr><td>Bize yazdığın e-postalar ve başvurular</td><td>Soru, destek, şikâyet ve başvuruları cevaplamak</td><td>f; KVKK başvurularında ç</td></tr>
@@ -83,12 +83,16 @@
     <li><strong>Hizmet sağlayıcılar</strong> (bizim adımıza, talimatımızla; veri işleyen):
       <ul>
         <li>Supabase (sunucu ve veritabanı; Frankfurt, Avrupa Birliği);</li>
-        <li>Google (Google ile giriş; Firebase Cloud Messaging ile telefon bildirimi);</li>
-        <li>Apple (iPhone'da Apple ile giriş);</li>
-        <li>GitHub (site ve uygulama güncellemelerinin dosyaları; yalnız istek sırasında IP adresi).</li>
+        <li>Google (Firebase Cloud Messaging ile telefon bildirimi).</li>
       </ul>
     </li>
-    <li><strong>Kendi koşullarıyla işleyen sağlayıcı:</strong> Android'de ML Kit'in kullanım bilgisini Google kendi koşullarına göre işler.</li>
+    <li><strong>Kendi koşullarıyla da işleyen sağlayıcılar:</strong>
+      <ul>
+        <li>Google ve Apple: girişte e-posta adresi ve temel hesap bilgisi onlardan, senin onayınla gelir. Hesap silinince Apple'daki bağlantıyı kaldırmak için Apple'a bildirim yapılır.</li>
+        <li>Google, Android'de ML Kit'in kullanım bilgisini kendi koşullarına göre işler.</li>
+        <li>GitHub, siteyi ve uygulama güncellemelerinin dosyalarını barındırır (GitHub Pages); ziyaretçinin IP adresini güvenlik amacıyla kendisi kaydeder ve saklar.</li>
+      </ul>
+    </li>
     <li><strong>Diğer kullanıcılar:</strong> yalnız uygulamada görünür yaptığın bilgiler (takma ad, fakülte, sınıf, puanlar, görünür yaptığın profil alanları, pano gönderileri, mesajların alıcısı).</li>
     <li><strong>Yetkili kamu kurum ve kuruluşları:</strong> yalnız kanunun zorunlu kıldığı hâllerde.</li>
   </ul>

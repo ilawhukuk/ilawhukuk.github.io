@@ -1,0 +1,6 @@
+/* Sitenin yazı tipleri sitenin içinden yüklenir; Google Fonts'a ya da başka bir sunucuya istek gitmez (heyet, 17 Kasım 2026).
+   Inter ve Cormorant Garamond: SIL Open Font License 1.1 (aynı klasörde OFL-*.txt). Üretim: scripts/site-yazitipi.sh */
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 400; font-display: swap; src: url(inter-400.woff) format('woff'); }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 600; font-display: swap; src: url(inter-600.woff) format('woff'); }
+@font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 600; font-display: swap; src: url(cormorant-garamond-600.woff) format('woff'); }
+@font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 700; font-display: swap; src: url(cormorant-garamond-700.woff) format('woff'); }

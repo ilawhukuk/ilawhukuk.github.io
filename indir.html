@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>İndir · iLaw Hukuk</title>
-<meta name="description" content="iLaw Hukuk test sürümünü kurma ve güncelleme (Android ve iPhone).">
+<meta name="description" content="iLaw Hukuk test sürümü: güncellemeler ve hesap kaydı (Android ve iPhone).">
 <link rel="icon" href="favicon.png">
 <link rel="stylesheet" href="fonts/yazitipi.css">
 <style>
@@ -34,19 +34,18 @@
     <a href="./" class="brand">iLaw<small>HUKUK</small></a>
   </header>
 
-  <h1>Test sürümünü kur</h1>
+  <h1>Test sürümü</h1>
   <p class="note"><strong>iLaw Hukuk şu an kapalı test döneminde; yeni katılım alınmıyor.</strong> Uygulama Google Play
     ve App Store'da çıkınca burada duyurulacak. Bu arada hesap açmadan tarayıcıda deneyebilirsiniz:
     <a href="dene/">Web deneme sürümü</a>.</p>
 
-  <h2>Kurulum (Android)</h2>
+  <h2>Telefonunda kuruluysa</h2>
   <div class="card">
-    <ol>
-      <li>Gruptaki <strong>iLaw-DAGITIM-SURUMU-v….apk</strong> dosyasına dokun ve indir.</li>
-      <li>İnen dosyayı aç ve <strong>Yükle</strong> de. Telefon "bilinmeyen kaynak" izni isterse ver.</li>
-      <li>Daha önce kurduysan yeni sürüm eskisinin üstüne kurulur; ilerlemen silinmez.</li>
-      <li>Hangi sürümde olduğunu ana ekranda logonun yanında görürsün (ör. <strong>v0.14.0 · TEST</strong>).</li>
-    </ol>
+    <ul>
+      <li>Uygulama çalışmaya devam eder; yenilikler uygulamanın içinden, kurmadan güncellemeyle kendiliğinden gelir.</li>
+      <li>Hangi sürümde olduğunu Ayarlar › Uygulama'da görürsün (ör. "v0.15.0 (kurulum v0.14.0)").</li>
+      <li>Uygulamayı sildiysen ana sürümü bekle: Google Play ve App Store'da çıkınca burada duyurulacak.</li>
+    </ul>
   </div>
   <div data-goster="v014" hidden>
   <h2>v0.14.0'da yeni</h2>
@@ -61,8 +60,8 @@
   </div>
   <h2>Eski sürümden geçiş</h2>
   <ul>
-    <li>Çalışma Notlarım için yeni sürümü kurman gerekir. Uygulamadaki "Yeni sürümü indir" düğmesi seni buraya getirir.
-      Yeni sürümü eskisinin üstüne kur; puanların ve ilerlemen silinmez.</li>
+    <li>Çalışma Notlarım yeni bir kurulum ister; o kurulum ana sürümle Google Play ve App Store'dan gelecek. Uygulamadaki
+      "Yeni sürümü indir" düğmesi seni bu sayfaya getirir. Hesabını kaydettiysen puanların ve ilerlemen ana sürüme taşınır.</li>
     <li>Kurmazsan da olur: öbür yenilikler eski sürüme kurmadan güncellemeyle gelir. Ayarlar › Uygulama'da sürümün ve
       kurulumun yazar (ör. "v0.13.7 (kurulum v0.13.0)").</li>
   </ul>
@@ -70,12 +69,9 @@
   <div data-goster="iphone" hidden>
   <h2>iPhone</h2>
   <div class="card">
-    <ol>
-      <li>App Store'dan Apple'ın ücretsiz <strong>TestFlight</strong> uygulamasını kur.</li>
-      <li>WhatsApp grubundaki TestFlight bağlantısına dokun (ya da <a id="tf-baglanti" href="#">buradan aç</a>); "Kabul Et",
-        sonra "Yükle".</li>
-      <li>Güncellemeler TestFlight'tan ve uygulamanın kendi kurmadan güncellemesiyle gelir.</li>
-    </ol>
+    <ul>
+      <li>TestFlight'tan kurduysan güncellemeler TestFlight'tan ve uygulamanın kendi kurmadan güncellemesiyle gelir.</li>
+    </ul>
   </div>
   </div>
 
@@ -98,18 +94,15 @@
 </main>
 <script>
   // Sürüme bağlı bölümler sürüm ayarından (surum.json): sayfa her an yayımlanabilir, bölümler zamanı gelince görünür.
-  //   v0.14 bölümleri: latest.version 0.14.0 ya da sonrası olunca (Android APK'sı gruba düşünce operasyon yazar);
-  //   iPhone bölümü: ios.url TestFlight bağlantısı olunca (Apple onayından sonra operasyon yazar).
+  //   v0.14 bölümleri: latest.version 0.14.0 ya da sonrası olunca;
+  //   iPhone bölümü: ios.url TestFlight bağlantısı olunca (bağlantı sayfada gösterilmez; yeni katılım alınmıyor).
   const sonra = (a, b) => { const x = String(a).split('.').map(Number), y = b.split('.').map(Number);
     for (let i = 0; i < 3; i++) if ((x[i] || 0) !== y[i]) return (x[i] || 0) > y[i]; return true; };
   const goster = ad => document.querySelectorAll(`[data-goster="${ad}"]`).forEach(e => { e.hidden = false; });
   fetch('surum.json', { cache: 'no-store' }).then(r => r.json()).then(c => {
     if (c && c.latest && sonra(c.latest.version, '0.14.0')) goster('v014');
     const url = c && c.ios && c.ios.url;
-    if (url && /^https:\/\/testflight\.apple\.com\//.test(url)) {
-      document.getElementById('tf-baglanti').href = url;
-      goster('iphone');
-    }
+    if (url && /^https:\/\/testflight\.apple\.com\//.test(url)) goster('iphone');
   }).catch(() => {});
 </script>
 </body>
